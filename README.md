@@ -3,9 +3,12 @@
 This is my first big c++ project. Please don't kill me for my (really) bad code. It works, but there are many unused functions and it's really obvious that I removed a lot of stuff during developement.
 
 Simple:
+```
 use the "current" command:
 current current example    //compiles the directory "example"
 current cvm example        //runs the compiled code @ "example/compiled"
+```
+
 
 Features of the "current" language:
 
