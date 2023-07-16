@@ -1,0 +1,3 @@
+uint32 a: 69;
+call std cout: a;
+call std cout: newLine;

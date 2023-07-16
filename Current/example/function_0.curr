@@ -1,0 +1,4 @@
+call math sub: a one;
+
+call std cout: a;
+call std cout: newLine;
