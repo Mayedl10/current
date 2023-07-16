@@ -1,0 +1,29 @@
+char H: 72;
+char W: 87;
+
+char d: 100;
+char e: 101;
+char l: 108;
+char o: 111;
+char r: 114;
+
+char SPACE: 32;
+char excl: 33
+
+call std cout: H;
+call std cout: e;
+call std cout: l;
+call std cout: l;
+call std cout: o;
+
+call std cout: SPACE;
+
+call std cout: W;
+call std cout: o;
+call std cout: r;
+call std cout: l;
+call std cout: d;
+
+call std cout: excl;
+
+call std quit: 0;
