@@ -321,7 +321,7 @@ std::string lastUsedID = "00000000";
 std::string lastUsedAnchorID = "00000000";
 
 
-std::string makeByteCode (std::vector<std::string> Tokens) {
+std::string makeByteCode (std::vector<std::string> Tokens, std::string directory) {
     Names TN;
     TokenCodes_cc TC;
     std_functions_cc STDF;
@@ -495,8 +495,8 @@ std::string makeByteCode (std::vector<std::string> Tokens) {
                 // call file
                 
                 tokenPTR++;
-                TempTokens = MakeTokens("example", "curr", "/" + Tokens[tokenPTR] + ".");
-                tempStr = makeByteCode(TempTokens);
+                TempTokens = MakeTokens(Tokens[tokenPTR], "curr", "/" + Tokens[tokenPTR] + ".");
+                tempStr = makeByteCode(TempTokens, directory);
 
                 Bytecode += tempStr;
                  
@@ -542,8 +542,8 @@ std::string makeByteCode (std::vector<std::string> Tokens) {
             tokenPTR++;
             // now points to the function/file's name
 
-            TempTokens = MakeTokens("example", "curr", "/" + Tokens[tokenPTR] + ".");
-            tempStr = makeByteCode(TempTokens);
+            TempTokens = MakeTokens(directory, "curr", "/" + Tokens[tokenPTR] + ".");
+            tempStr = makeByteCode(TempTokens, directory);
 
             Bytecode += tempStr;
 
@@ -590,7 +590,7 @@ void current_bundle (std::string targetDirectory, std::string fileExtension = "c
     
     std::vector<std::string> Tokens = MakeTokens(targetDirectory, fileExtension);
 
-    std::string BC = makeByteCode(Tokens);
+    std::string BC = makeByteCode(Tokens, targetDirectory);
 
     writeToFile(targetDirectory+"/compiled/main.", outputFileExtension, BC);
 
