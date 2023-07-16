@@ -1,0 +1,10 @@
+uint32 zero: 0;
+uint32 one: 1;
+
+uint32 inpTarget: 0;
+
+call std cinp: inpTarget;
+
+whileNotZero inpTarget: infinite;
+
+call std quit: 0;
