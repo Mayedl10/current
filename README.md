@@ -73,3 +73,11 @@ cal std cout: x;
 ```
 
 As one could guess from this, all variables are global and shared across files.
+
+
+Use this to quit out of the program:
+```
+call std quit 0;
+```
+
+Replace the 0 with a 1 to see debug output.
