@@ -1,4 +1,4 @@
-# Current Programming language and 32-bit code interpreter
+# Current Programming language
 
 This is my first big c++ project. Please don't kill me for my (really) bad code. It works, but there are many unused functions and it's really obvious that I removed a lot of stuff during developement.
 
